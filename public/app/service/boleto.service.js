@@ -1,38 +1,25 @@
 'use strict';
 
-app.factory('User', function ($resource) {
-
-    var resource = $resource('/users', { },
-      {      
-        get: {
-          method: 'GET',
-          isArray: true
-        }
-  	  });
+app.factory('Boleto', function($http, $q) {
 
     return {
 
-        allUsers: function(callback) {
+        get: function(callback) {
             var cb = callback || angular.noop;
-            return resource.get({ },
-            function(data) {
-                return cb(data);
-            }, 
-            function(err) {
-                return cb(err);
-            }).$promise;
-        },
-        createUser: function(user, callback) {
-            var cb = callback || angular.noop;
-            return resource.save(user, 
-            function(data) {
-                return cb(data);
-            }, 
-            function(err) {
-                return cb(err);
-            }).$promise;
+            var deferred = $q.defer();
+            $http.get('/boleto/bb/', {})
+                .success(function(data) {
+                    deferred.resolve(data);
+                    return cb();
+                }).error(function(err) {
+                    deferred.reject(err);
+                    return cb(err);
+                }.bind(this));
+
+            return deferred.promise;
+
         }
 
-    }
+    };
 
 });

@@ -7,7 +7,7 @@
 module.exports = function(app) {
 
   // Insert routes below
-  app.use('/users', require('./api/user'));
+  app.use('/boleto', require('./api/boleto'));
 
   // All other routes should redirect to the index.html
   app.route('/*')

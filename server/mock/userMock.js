@@ -4,16 +4,16 @@
 
 'use strict';
 
-var User = require('../api/user/user.model');
+// var User = require('../api/user/user.model');
 
 module.exports = function(json) {
 
-    var jsondata = json.getConfig('/users.json');
+    // var jsondata = json.getConfig('/users.json');
 
-    User.find({}).remove(function() {
-        User.create(jsondata, function() {
-            console.log('finished populating users');
-        });
-    });
+    // User.find({}).remove(function() {
+    //     User.create(jsondata, function() {
+    //         console.log('finished populating users');
+    //     });
+    // });
 
 }
