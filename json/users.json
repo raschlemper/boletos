@@ -1,0 +1,14 @@
+[{
+    "provider": "local",
+    "name": "Test User",
+    "email": "test@test.com",
+    "image": "homer.png",
+    "password": "test"
+}, {
+    "provider": "local",
+    "role": "admin",
+    "name": "Rafael Augusto Schlemper",
+    "email": "raschlemper@gmail.com",
+    "image": "bart.png",
+    "password": "admin"
+}]

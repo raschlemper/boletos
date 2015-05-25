@@ -1,0 +1,40 @@
+{
+  "name": "Teratec-Boleto",
+  "version": "1.0.0",
+  "description": "Boleto Teratec",
+  "keywords": [
+    "OpenShift",
+    "Node.js",
+    "application",
+    "openshift"
+  ],
+  "author": {
+    "name": "Rafael Schlemper",
+    "email": "teratec.company@gmail.com",
+    "url": "http://www.openshift.com/"
+  },
+  "homepage": "http://www.openshift.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openshift/origin-server"
+  },
+
+  "engines": {
+    "node": ">= 0.6.0",
+    "npm": ">= 1.0.0"
+  },
+
+  "dependencies": {
+    "express": "~4.0.0",
+    "lodash": "~2.4.1",
+    "mongodb": "*",
+    "mongoose": "*",
+    "lodash": "~2.4.1",
+    "body-parser": "~1.5.0"
+  },
+  "devDependencies": {},
+  "bundleDependencies": [],
+
+  "private": true,
+  "main": "server/app.js"
+}
