@@ -5,6 +5,6 @@ var controller = require('./bb.controller');
 
 var router = express.Router();
 
-router.get('/bb/', controller.index);
+router.post('/bb/', controller.index);
 
 module.exports = router;

@@ -4,10 +4,10 @@ app.factory('Boleto', function($http, $q) {
 
     return {
 
-        get: function(callback) {
+        get: function(dadosBoleto, callback) {
             var cb = callback || angular.noop;
             var deferred = $q.defer();
-            $http.get('/boleto/bb/', {})
+            $http.post('/boleto/bb/', dadosBoleto)
                 .success(function(data) {
                     deferred.resolve(data);
                     return cb();
